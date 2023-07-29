@@ -4,6 +4,18 @@ import javax.swing.tree.TreeNode;
 
 public class isSubTree {
 
+    static class TreeNode{
+        int val; 
+        TreeNode left; 
+        TreeNode right; 
+
+        TreeNode(int val){
+            this.val = val; 
+            this.left = null; 
+            this.right = null; 
+        }
+    }
+
     // root and subroot will be provided
 
     public boolean isIdentical(TreeNode root, TreeNode subroot){
