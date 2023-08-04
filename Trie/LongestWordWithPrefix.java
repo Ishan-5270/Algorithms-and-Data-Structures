@@ -1,6 +1,6 @@
 package Trie;
 
-public class CountUniqueSubs {
+public class LongestWordWithPrefix {
 
     static class Node {
         Node[] children; 
@@ -51,37 +51,38 @@ public class CountUniqueSubs {
         return true;
     }
 
-    public static int countNode(Node root){
-        int count = 0;
+
+    public static String answer = "";
+
+    public static void longestword(Node root, StringBuilder temp){
         if (root == null){
-            return 0;
+            return; 
         }
 
         for (int i = 0; i < 26; i++) {
-            if (root.children[i] != null){
-                count += countNode(root.children[i]);
+            if (root.children[i]!= null && root.children[i].eow == true){
+                temp.append((char)(i + 'a'));
+                if (temp.length() > answer.length()){
+                    answer = temp.toString();
+                }
+                longestword(root.children[i], temp);
+
+                temp.deleteCharAt(temp.length() - 1);
             }
         }
-        return count + 1;
-    }
 
+    }
 
     
     public static void main(String[] args) {
-        // String words[] = {"the", "a", "there", "their", "any"};
-        // for (int i = 0; i < words.length; i++) {
-        //     insert(words[i]);
-        // }
 
-        // System.out.println(search("their"));
+        String words[] = {"a", "app", "ap", "appl", "apply", "apple"};
 
-        String str = "ababa";
-
-        for (int i = 0; i < str.length(); i++) {
-            String suffix = str.substring(i);
-            insert(suffix);
+        for (int i = 0; i < words.length; i++) {
+            insert(words[i]);
         }
 
-        System.out.println(countNode(root));
+        longestword(root, new StringBuilder(""));
+        System.out.println(answer);
     }
 }
