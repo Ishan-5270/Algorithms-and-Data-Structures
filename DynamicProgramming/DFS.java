@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.*;
 
-public class BFS {
+public class DFS {
     /*
      * it is not the preferred method because we are even storing information that is not needed 
      * Space Complexity is too high
@@ -41,27 +41,17 @@ public class BFS {
 
         // All the graph elements are added to the graph
     }
+    
+    public static void dfs(ArrayList<Edge> graph[], boolean vis[], int curr){
+        System.out.print(curr + " ");
+        vis[curr] = true;
 
-
-    public static void bfs(ArrayList<Edge> graph[], int V, boolean vis[], int start){ 
-        // TC - O(V + E)
-        Queue<Integer> q = new LinkedList<>();
-        q.add(start);
-
-        while (!q.isEmpty()){
-            int curr = q.remove();
-            if (vis[curr] == false){
-                System.out.println(curr + " ");
-                vis[curr] = true;
-            }
-
-            for (int i = 0; i < graph[curr].size(); i++) {
-                Edge e = graph[curr].get(i);
-                q.add(e.dest);
-            }
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if (vis[e.dest] == false)
+                dfs(graph, vis, e.dest);      
         }
     }
-    
 
     public static void main(String[] args) {
         int V = 4;
@@ -73,8 +63,8 @@ public class BFS {
         
         for (int i = 0; i < V; i++) {
             if (vis[i] == false){
-                bfs(graph, V, vis, i);
+              dfs(graph, vis, i);  
             }
-        }
+          }
     }
 }

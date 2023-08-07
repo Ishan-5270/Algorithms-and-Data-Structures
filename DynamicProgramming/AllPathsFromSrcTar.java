@@ -2,7 +2,7 @@ package DynamicProgramming;
 
 import java.util.*;
 
-public class BFS {
+public class AllPathsFromSrcTar {
     /*
      * it is not the preferred method because we are even storing information that is not needed 
      * Space Complexity is too high
@@ -41,27 +41,23 @@ public class BFS {
 
         // All the graph elements are added to the graph
     }
+    
+    // O(V^V) -> Time Complexity is  pretty bad 
+    public static void dfs(ArrayList<Edge> graph[], boolean vis[], int curr, String path, int tar){
+        if (curr == tar){
+            System.out.println(path);
+            return;
+        }
 
-
-    public static void bfs(ArrayList<Edge> graph[], int V, boolean vis[], int start){ 
-        // TC - O(V + E)
-        Queue<Integer> q = new LinkedList<>();
-        q.add(start);
-
-        while (!q.isEmpty()){
-            int curr = q.remove();
-            if (vis[curr] == false){
-                System.out.println(curr + " ");
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if (!vis[e.dest]){
                 vis[curr] = true;
-            }
-
-            for (int i = 0; i < graph[curr].size(); i++) {
-                Edge e = graph[curr].get(i);
-                q.add(e.dest);
+                dfs(graph, vis, e.dest, path + e.dest, tar);
+                vis[curr ]  = false;
             }
         }
     }
-    
 
     public static void main(String[] args) {
         int V = 4;
@@ -73,8 +69,8 @@ public class BFS {
         
         for (int i = 0; i < V; i++) {
             if (vis[i] == false){
-                bfs(graph, V, vis, i);
+              dfs(graph, vis, 0, "0", 3);
             }
-        }
+          }
     }
 }
