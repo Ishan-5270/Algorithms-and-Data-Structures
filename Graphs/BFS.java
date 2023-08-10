@@ -1,10 +1,14 @@
-package DynamicProgramming;
+package Graphs;
 
-import java.util.ArrayList;
+import java.util.*;
 
-public class AdjacencyList{
+public class BFS {
+    /*
+     * it is not the preferred method because we are even storing information that is not needed 
+     * Space Complexity is too high
+     */
 
-    static class Edge{
+ static class Edge{
         int src;
         int dest;
         int weight; 
@@ -17,21 +21,12 @@ public class AdjacencyList{
         }
     }
 
-    /*
-     * A lot of graph computations involve finding the neighbor
-     * This can be done by looping through the arraylist stored at the index 
-     * for which for neighbor needs to be found
-     * This makes the TC of the operation O(X) --> where X is the number of neighbors that a certain vertex has 
-     * This makes adjacency list one of the most efficient ways to implement a graph DS 
-     */
-
-
     public static void createGraph(ArrayList<Edge> graph[]){
         for (int i = 0; i < graph.length; i++) {
             graph[i] = new ArrayList<Edge>();
             // Creating an empty Arraylist at every index enables us to store the values for the graph
         }
-
+ 
         graph[0].add(new Edge(0, 2, 2));
 
         graph[1].add(new Edge(1, 2, 10));
@@ -47,19 +42,39 @@ public class AdjacencyList{
         // All the graph elements are added to the graph
     }
 
+
+    public static void bfs(ArrayList<Edge> graph[], int V, boolean vis[], int start){ 
+        // TC - O(V + E)
+        Queue<Integer> q = new LinkedList<>();
+        q.add(start);
+
+        while (!q.isEmpty()){
+            int curr = q.remove();
+            if (vis[curr] == false){
+                System.out.println(curr + " ");
+                vis[curr] = true;
+            }
+
+            for (int i = 0; i < graph[curr].size(); i++) {
+                Edge e = graph[curr].get(i);
+                q.add(e.dest);
+            }
+        }
+    }
+    
+
     public static void main(String[] args) {
         int V = 4;
 
         ArrayList<Edge> graph[] = new ArrayList[V];
-        // print 2's neighbors 
 
         createGraph(graph);
-
-        for (int i = 0; i < graph[2].size(); i++) {
-            Edge e = graph[2].get(i);
-            System.out.print(e.dest  + " " + e.weight);
-            System.out.println();
+        boolean vis[] = new boolean[V];
+        
+        for (int i = 0; i < V; i++) {
+            if (vis[i] == false){
+                bfs(graph, V, vis, i);
+            }
         }
     }
 }
-

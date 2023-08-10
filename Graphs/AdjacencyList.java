@@ -1,14 +1,10 @@
-package DynamicProgramming;
+package Graphs;
 
-import java.util.*;
+import java.util.ArrayList;
 
-public class topologicalsort {
-    /*
-     * it is not the preferred method because we are even storing information that is not needed 
-     * Space Complexity is too high
-     */
+public class AdjacencyList{
 
- static class Edge{
+    static class Edge{
         int src;
         int dest;
         int weight; 
@@ -20,6 +16,15 @@ public class topologicalsort {
             // for weighted graphs 
         }
     }
+
+    /*
+     * A lot of graph computations involve finding the neighbor
+     * This can be done by looping through the arraylist stored at the index 
+     * for which for neighbor needs to be found
+     * This makes the TC of the operation O(X) --> where X is the number of neighbors that a certain vertex has 
+     * This makes adjacency list one of the most efficient ways to implement a graph DS 
+     */
+
 
     public static void createGraph(ArrayList<Edge> graph[]){
         for (int i = 0; i < graph.length; i++) {
@@ -41,17 +46,20 @@ public class topologicalsort {
 
         // All the graph elements are added to the graph
     }
-    
-    public static void topSort(Arraylist<Edge> graph[], )
 
     public static void main(String[] args) {
         int V = 4;
 
         ArrayList<Edge> graph[] = new ArrayList[V];
+        // print 2's neighbors 
 
         createGraph(graph);
-        boolean vis[] = new boolean[V];
 
-        
+        for (int i = 0; i < graph[2].size(); i++) {
+            Edge e = graph[2].get(i);
+            System.out.print(e.dest  + " " + e.weight);
+            System.out.println();
+        }
     }
 }
+

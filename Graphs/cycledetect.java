@@ -1,8 +1,8 @@
-package DynamicProgramming;
+package Graphs;
 
 import java.util.*;
 
-public class DFS {
+public class cycledetect {
     /*
      * it is not the preferred method because we are even storing information that is not needed 
      * Space Complexity is too high
@@ -53,18 +53,42 @@ public class DFS {
         }
     }
 
+
+    public static boolean isCycle(ArrayList<Edge> graph[], boolean vis[], int curr, boolean recstack[]){
+        vis[curr] = true;
+        recstack[curr] = true;
+
+        for (int i = 0; i < graph[curr].size(); i++) {
+            Edge e = graph[curr].get(i);
+            if (recstack[e.dest]){ // cycle
+                return true;
+            } else if (!vis[e.dest] && isCycle(graph, vis, e.dest, recstack)){
+                return true;
+            }
+        }
+        recstack[curr] = false;
+        return false; 
+    }
+
     public static void main(String[] args) {
         int V = 4;
 
         ArrayList<Edge> graph[] = new ArrayList[V];
 
         createGraph(graph);
+
         boolean vis[] = new boolean[V];
-        
+        boolean recstack[] = new boolean[V];
+
         for (int i = 0; i < V; i++) {
-            if (vis[i] == false){
-              dfs(graph, vis, i);  
-            }
-          }
+            if (!vis[i]){
+                boolean isCycle = isCycle(graph, vis, 0, recstack);
+                if (isCycle){
+                    System.out.println(isCycle);
+                    break;
+                } 
+            }  
+        }
+        System.out.println("False");
     }
 }

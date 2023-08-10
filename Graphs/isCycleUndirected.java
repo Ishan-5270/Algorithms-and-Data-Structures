@@ -1,8 +1,8 @@
-package DynamicProgramming;
+package Graphs;
 
 import java.util.*;
 
-public class cycledetect {
+public class isCycleUndirected {
     /*
      * it is not the preferred method because we are even storing information that is not needed 
      * Space Complexity is too high
@@ -41,33 +41,30 @@ public class cycledetect {
 
         // All the graph elements are added to the graph
     }
-    
-    public static void dfs(ArrayList<Edge> graph[], boolean vis[], int curr){
-        System.out.print(curr + " ");
+
+    public static boolean isCycle(ArrayList<Edge> graph[], boolean vis[], int curr, int parent){ // O(V +  E)
         vis[curr] = true;
 
         for (int i = 0; i < graph[curr].size(); i++) {
             Edge e = graph[curr].get(i);
-            if (vis[e.dest] == false)
-                dfs(graph, vis, e.dest);      
-        }
-    }
 
-
-    public static boolean isCycle(ArrayList<Edge> graph[], boolean vis[], int curr, boolean recstack[]){
-        vis[curr] = true;
-        recstack[curr] = true;
-
-        for (int i = 0; i < graph[curr].size(); i++) {
-            Edge e = graph[curr].get(i);
-            if (recstack[e.dest]){ // cycle
-                return true;
-            } else if (!vis[e.dest] && isCycle(graph, vis, e.dest, recstack)){
+            // if neighbor is visited and is not your parent then it is the condition of a cycle 
+            if (vis[e.dest] && e.dest != parent){
                 return true;
             }
+
+            // if neighbor is visited and is your parent return -> not doing anything commenting for best practice 
+            // if (vis[e.dest] && e.dest == parent){
+            //     return false;
+            // }
+            
+            if (!vis[e.dest]){
+                if (isCycle(graph, vis, e.dest, curr)){
+                    return true;
+                }
+            }
         }
-        recstack[curr] = false;
-        return false; 
+        return false;
     }
 
     public static void main(String[] args) {
@@ -76,19 +73,8 @@ public class cycledetect {
         ArrayList<Edge> graph[] = new ArrayList[V];
 
         createGraph(graph);
-
         boolean vis[] = new boolean[V];
-        boolean recstack[] = new boolean[V];
-
-        for (int i = 0; i < V; i++) {
-            if (!vis[i]){
-                boolean isCycle = isCycle(graph, vis, 0, recstack);
-                if (isCycle){
-                    System.out.println(isCycle);
-                    break;
-                } 
-            }  
-        }
-        System.out.println("False");
+        
+        System.out.println(isCycle(graph, new boolean[V], 0, -1));
     }
 }
