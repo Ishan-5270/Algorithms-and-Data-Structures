@@ -6,6 +6,10 @@ public class BellmanFord {
     // TC - Djikstra is less than Bellman Fords Algorithm
     // O(V*E) -> TC 
 
+    /*
+     * Bellman Ford Algorithm does not work in a graph where there is a negatively weighted cycle 
+     */
+
      static class Edge{
         int src;
         int dest;
@@ -45,10 +49,26 @@ public class BellmanFord {
             }
         }
 
-        for (int i = 0; i < dist.length; i++) {
-             
-        }
-    }
+        for (int k = 0; k < V-1; k++){ // O(V)
+            // O(E)
+            for (int i = 0; i < V; i++) {
+                for (int j = 0; j < graph[i].size(); j++) {
+                    Edge e = graph[i].get(i);
+                    int u = e.src;
+                    int v = e.dest;
 
+                    if (dist[u]!= Integer.MAX_VALUE && dist[u] + e.wt < dist[v]){
+                        // If we add anything to infinity then it will return a smaller number probably somehting negative
+                        dist[v] = dist[u] + e.wt;
+                    }
+                }
+            }
+        }
+
+        for (int i = 0; i < dist.length; i++) {
+            System.out.print(dist[i] + " ");
+        }
+        System.out.println();
+    }
 
 }
