@@ -67,6 +67,7 @@ public class ArticulationPoint {
     }
 
 
+    // O(V + E)
     public static void articulationpoint(ArrayList<Edge> graph[], int V){
         int dt[] = new int[V];
         int low[] = new int[V];
