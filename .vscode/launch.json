@@ -1,0 +1,455 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Arraylists",
+            "request": "launch",
+            "mainClass": "ArrayLists.Arraylists",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "BinaryTrees",
+            "request": "launch",
+            "mainClass": "BinaryTrees.BinaryTrees",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "CalltoParty",
+            "request": "launch",
+            "mainClass": "CalltoParty",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "CountX",
+            "request": "launch",
+            "mainClass": "CountX",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "FirstandLastOc",
+            "request": "launch",
+            "mainClass": "FirstandLastOc",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "AdjacencyList",
+            "request": "launch",
+            "mainClass": "Graphs.AdjacencyList",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Adjacencymatrix",
+            "request": "launch",
+            "mainClass": "Graphs.Adjacencymatrix",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "AllPathsFromSrcTar",
+            "request": "launch",
+            "mainClass": "Graphs.AllPathsFromSrcTar",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "ArticulationPoint",
+            "request": "launch",
+            "mainClass": "Graphs.ArticulationPoint",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "BFS",
+            "request": "launch",
+            "mainClass": "Graphs.BFS",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "BridgeinGraphs",
+            "request": "launch",
+            "mainClass": "Graphs.BridgeinGraphs",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "DFS",
+            "request": "launch",
+            "mainClass": "Graphs.DFS",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Djikstra",
+            "request": "launch",
+            "mainClass": "Graphs.Djikstra",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "MST",
+            "request": "launch",
+            "mainClass": "Graphs.MST",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "SCC",
+            "request": "launch",
+            "mainClass": "Graphs.SCC",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "cycledetect",
+            "request": "launch",
+            "mainClass": "Graphs.cycledetect",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "isCycleUndirected",
+            "request": "launch",
+            "mainClass": "Graphs.isCycleUndirected",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "topologicalsort",
+            "request": "launch",
+            "mainClass": "Graphs.topologicalsort",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "hashmap",
+            "request": "launch",
+            "mainClass": "Hashing.Hashset.hashmap",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "hashsetimp",
+            "request": "launch",
+            "mainClass": "Hashing.Hashset.hashsetimp",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "hashtable",
+            "request": "launch",
+            "mainClass": "Hashing.Hashset.hashtable",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "IntersectionOfArrays",
+            "request": "launch",
+            "mainClass": "Hashing.IntersectionOfArrays",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "NoOfSubArrays",
+            "request": "launch",
+            "mainClass": "Hashing.NoOfSubArrays",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "PrintItenary",
+            "request": "launch",
+            "mainClass": "Hashing.PrintItenary",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "UnionofArrays",
+            "request": "launch",
+            "mainClass": "Hashing.UnionofArrays",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "majorityelement",
+            "request": "launch",
+            "mainClass": "Hashing.majorityelement",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "KeyboardCombinations",
+            "request": "launch",
+            "mainClass": "KeyboardCombinations",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "ReverseWords",
+            "request": "launch",
+            "mainClass": "Leetcode.ReverseWords",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "HasCycles",
+            "request": "launch",
+            "mainClass": "LinkedList.HasCycles",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "LL",
+            "request": "launch",
+            "mainClass": "LinkedList.LL",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "LinkedList",
+            "request": "launch",
+            "mainClass": "LinkedList.LinkedList",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "RemoveNthfromEnd",
+            "request": "launch",
+            "mainClass": "LinkedList.RemoveNthfromEnd",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "ReverseLL",
+            "request": "launch",
+            "mainClass": "LinkedList.ReverseLL",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "InheritOOPS",
+            "request": "launch",
+            "mainClass": "OOPs.InheritOOPS",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "OOPS",
+            "request": "launch",
+            "mainClass": "OOPs.OOPS",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "PathsinMaze",
+            "request": "launch",
+            "mainClass": "PathsinMaze",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Permutations",
+            "request": "launch",
+            "mainClass": "Permutations",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "PlaceTiles",
+            "request": "launch",
+            "mainClass": "PlaceTiles",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "PrintSubsets",
+            "request": "launch",
+            "mainClass": "PrintSubsets",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "CircularQueue",
+            "request": "launch",
+            "mainClass": "Queue.CircularQueue",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Queue",
+            "request": "launch",
+            "mainClass": "Queue.Queue",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Queue2Stacks",
+            "request": "launch",
+            "mainClass": "Queue.Queue2Stacks",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "QueueCF",
+            "request": "launch",
+            "mainClass": "Queue.QueueCF",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "QueueLinkedList",
+            "request": "launch",
+            "mainClass": "Queue.QueueLinkedList",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "RemoveDuplicates",
+            "request": "launch",
+            "mainClass": "RemoveDuplicates",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "ReverseString",
+            "request": "launch",
+            "mainClass": "ReverseString",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "QuickSort",
+            "request": "launch",
+            "mainClass": "Sorting.QuickSort",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "mergesort",
+            "request": "launch",
+            "mainClass": "Sorting.mergesort",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "CFStack",
+            "request": "launch",
+            "mainClass": "Stack.CFStack",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "PushBottom",
+            "request": "launch",
+            "mainClass": "Stack.PushBottom",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "ReverseStack",
+            "request": "launch",
+            "mainClass": "Stack.ReverseStack",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "StackClass",
+            "request": "launch",
+            "mainClass": "Stack.StackClass",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "StrictlyIncreasingArray",
+            "request": "launch",
+            "mainClass": "StrictlyIncreasingArray",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Subsequences",
+            "request": "launch",
+            "mainClass": "Subsequences",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "TowersofHanoi",
+            "request": "launch",
+            "mainClass": "TowersofHanoi",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "TraversalTrees",
+            "request": "launch",
+            "mainClass": "Trees.TraversalTrees",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "isSubTree",
+            "request": "launch",
+            "mainClass": "Trees.isSubTree",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "CountUniqueSubs",
+            "request": "launch",
+            "mainClass": "Trie.CountUniqueSubs",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "LongestWordWithPrefix",
+            "request": "launch",
+            "mainClass": "Trie.LongestWordWithPrefix",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "StartswithPrefix",
+            "request": "launch",
+            "mainClass": "Trie.StartswithPrefix",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "Trie",
+            "request": "launch",
+            "mainClass": "Trie.Trie",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "TrieWordBreak",
+            "request": "launch",
+            "mainClass": "Trie.TrieWordBreak",
+            "projectName": "ADS_83a89b5b"
+        },
+        {
+            "type": "java",
+            "name": "UniqueSubsequences",
+            "request": "launch",
+            "mainClass": "UniqueSubsequences",
+            "projectName": "ADS_83a89b5b"
+        }
+    ]
+}
