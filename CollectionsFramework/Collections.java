@@ -1,6 +1,11 @@
 package CollectionsFramework;
 
+import java.util.ArrayList;
+
 public class Collections {
+
+    public static void sort(ArrayList<Integer> list1) {
+    }
     // the tools are already there at your dispoal -> collections of classes and interfaces
     // Collections Interface implements the iterable interface 
     // 1) List 2) Quene 3) Set -> are all data structures 
