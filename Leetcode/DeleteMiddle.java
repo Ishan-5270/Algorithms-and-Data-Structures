@@ -5,7 +5,7 @@ public class DeleteMiddle {
         /*
          * The first and actually better approach to this question is the fast and slow  approach 
          * TC - O(N) iterating over the linked list once 
-         * SC - O(1) we only need two pointers and hence we need constant time for that
+         * SC - O(1) we only need two pointers and hence we need constant time for thatt
          */
 
          if (head.next == null){
