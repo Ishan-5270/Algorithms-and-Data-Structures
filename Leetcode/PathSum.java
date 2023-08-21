@@ -24,4 +24,8 @@ public class PathSum {
             dfs(root.right, targetSum);
         }
     }
+
+    public static void main(String[] args) {
+        
+    }
 }
